@@ -39,7 +39,6 @@ export default function Home() {
       <nav aria-label="주요 메뉴">
         <a href="#about">소개</a><a href="#experience">경험</a><a href="#now">지금</a><a href="#notes">현장 노트</a><a href="#book">책</a>
       </nav>
-      <a className="header-link" href="#connect">상담 <span aria-hidden="true">↗</span></a>
     </header>
     <main id="main">
       <section className="hero" id="top" aria-labelledby="hero-title">
