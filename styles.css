@@ -14,3 +14,58 @@
 @media(max-width:900px){.site-header{padding:.8rem 1.2rem}nav{gap:clamp(.8rem,2vw,1.5rem);padding:.25rem 0}nav a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 .25rem}.hero{grid-template-columns:1fr}.hero-copy{padding-top:3.3rem}.hero-visual{min-height:310px;order:-1}.globe{width:135px}.orbit-one{width:62%;height:28%}.orbit-two{width:36%;height:74%}.visual-label{font-size:.43rem}.label-a{top:16%;left:23%}.label-b{bottom:16%;right:21%}.visual-stamp{right:20%;top:15%;width:32px;height:32px;font-size:.42rem}.intro-grid,.split-head,.book-grid,.connect-row{grid-template-columns:1fr;gap:2.4rem}.section-head{display:block}.section-head>p{margin-top:1.5rem}.card-grid{grid-template-columns:repeat(2,1fr)}.book-heading{display:block}.book-heading>span{display:block;margin-top:1.5rem}.book-cover{max-width:220px}.focus-item summary{grid-template-columns:2.8rem 1fr 1rem;gap:.8rem}.note-body{margin-left:3.6rem}.note-copy strong{font-size:1.05rem}footer{flex-wrap:wrap}}
 @media(max-width:600px){html{scroll-padding-top:4.5rem}body{padding-top:58px}.site-header{min-height:58px;padding:.55rem .8rem}.brand{font-size:1.05rem}nav{padding:.15rem 0}nav a{font-size:.72rem}.hero-copy{padding:2.6rem 1.4rem 3rem}h1{font-size:clamp(1.65rem,8.2vw,2.25rem);margin-bottom:1.2rem}.eyebrow{font-size:.52rem;margin-bottom:1rem}.hero-description{font-size:.84rem}.hero-actions{gap:1rem}.button{padding:.75rem .9rem}.hero-visual{min-height:255px}.section-pad{padding:4rem 1.4rem}.intro h2,.section-head h2,.split-head h2,.connect h2,.book-heading h2{font-size:clamp(2rem,10vw,3rem)}.card-grid{grid-template-columns:1fr}.info-card{min-height:200px}.now-list li{grid-template-columns:2.8rem 1fr}.focus-item summary{padding:1.5rem 0}.note-copy small{font-size:.78rem}.note-body{font-size:.86rem;margin-left:0}.book-grid{margin-top:3rem}.connect-card{padding:1.4rem}footer{display:grid;text-align:center;justify-content:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}}
+
+/* 260825 — approved homepage refresh */
+:root{--ink:#0c2945;--paper:#f4f7f8;--sand:#e1ebef;--gold:#b97a28;--muted:#586775;--line:rgba(12,41,69,.15)}
+.site-header{background:rgba(244,247,248,.94);box-shadow:0 6px 22px rgba(12,41,69,.05)}
+nav{width:min(100%,52rem);gap:clamp(.5rem,1.7vw,1.35rem)}
+nav a{position:relative;padding:.45rem .08rem;transition:color .18s ease}
+nav a::after{content:"";position:absolute;left:.08rem;right:.08rem;bottom:.2rem;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .18s ease}
+nav a:hover::after,nav a:focus-visible::after{transform:scaleX(1)}
+.nav-home{color:var(--gold)}
+.hero{min-height:640px}.hero-copy{align-self:center}.hero-visual{background:linear-gradient(145deg,#dce8ec,#edf2f3)}
+.globe{border-width:2px}.point{box-shadow:0 0 0 4px rgba(185,122,40,.12)}
+h1{max-width:49rem;font-size:clamp(2.15rem,4.15vw,4rem);line-height:1.08;letter-spacing:-.062em}
+.hero-description{max-width:37rem;font-size:1rem;line-height:1.82}
+.button{border-radius:5px;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}.button:hover{transform:translateY(-2px)}
+.text-link{padding:.55rem 0;border-bottom:1px solid var(--ink)}
+.intro h2,.section-head h2,.split-head h2,.connect h2,.book-heading h2{font-size:clamp(2.2rem,4vw,3.95rem);line-height:1.12;letter-spacing:-.052em}
+.intro-copy p{font-size:1.02rem;line-height:1.82}.split-head>p,.section-head>p{line-height:1.82}
+.experience{background:#fff}.info-card{transition:background .18s ease,transform .18s ease}.info-card:hover{background:#f4f7f8;transform:translateY(-2px)}
+.focus{background:#e7ecee}.focus-item summary{transition:background .18s ease}.focus-item summary:hover{background:rgba(255,255,255,.42)}
+.book-store-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:1rem;border-top:1px solid rgba(255,255,255,.24);border-left:1px solid rgba(255,255,255,.24)}
+.book-store-buttons a{min-height:52px;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;color:#fff;text-decoration:none;font-size:.78rem;font-weight:700;border-right:1px solid rgba(255,255,255,.24);border-bottom:1px solid rgba(255,255,255,.24);transition:background .18s ease,color .18s ease}
+.book-store-buttons a:hover{background:#fff;color:var(--ink)}
+.connect-card{box-shadow:0 16px 40px rgba(12,41,69,.12)}
+.section-kicker{font-weight:500}
+.info-card p,.now-list p,.note-copy small,.note-body,.book-copy p,.connect-card p{line-height:1.78}
+@media(max-width:900px){.hero-visual{min-height:330px}.globe{width:150px}}
+@media(max-width:600px){
+  html{scroll-padding-top:5.5rem}
+  body{padding-top:78px}
+  .site-header{min-height:78px;grid-template-columns:1fr;grid-template-rows:20px 44px;gap:.1rem;padding:.35rem clamp(.7rem,3.4vw,1rem) .4rem}
+  .brand{justify-self:start;line-height:1;font-size:1rem}
+  nav{grid-row:2;width:100%;margin:0;justify-content:space-between;gap:.22rem;padding:0}
+  nav a{min-height:40px;font-size:clamp(.61rem,2.65vw,.7rem);padding:.45rem .08rem}
+  .hero-copy{padding:2.7rem clamp(1.15rem,5.6vw,1.4rem) 3.25rem}
+  .hero-visual{min-height:255px}
+  h1{font-size:clamp(1.7rem,7.7vw,2.2rem);line-height:1.16;letter-spacing:-.055em}
+  .hero-description{font-size:.86rem;line-height:1.78}
+  .section-pad{padding:3.8rem clamp(1.15rem,5.6vw,1.4rem)}
+  .section-kicker{font-size:.63rem}
+  .intro h2,.section-head h2,.split-head h2,.connect h2,.book-heading h2{font-size:clamp(1.95rem,9.2vw,2.8rem);line-height:1.16}
+  .intro-grid,.split-head,.book-grid,.connect-row{gap:2rem;margin-top:2.25rem}
+  .section-head h2{margin-top:1.25rem}.section-head>p{margin-top:1.15rem}
+  .card-grid,.now-list,.focus-list{margin-top:2.75rem}
+  .info-card{min-height:170px;padding:1.4rem}
+  .now-list li{padding:1.35rem 0}
+  .focus-item summary{min-height:92px;padding:1.35rem 0}
+  .book-cover{margin:0 auto;max-width:205px}
+  .book-copy h3{font-size:1.35rem;margin-bottom:1.4rem}
+  .book-store-buttons{grid-template-columns:1fr}
+  .connect-card{padding:1.25rem}
+  .hero-actions{align-items:stretch}.hero-actions .button-primary{width:100%}.hero-actions .text-link{width:max-content}
+  footer{padding:1.25rem}
+}
+@media(max-width:340px){.site-header{padding-left:.55rem;padding-right:.55rem}nav{gap:.1rem}nav a{font-size:.58rem}.eyebrow{letter-spacing:.06em}}
+
