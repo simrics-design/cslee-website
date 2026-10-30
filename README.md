@@ -6,7 +6,10 @@ Drizzle support.
 
 ## Prerequisites
 
-- Node.js `>=22.13.0`
+- Security-patched Node.js matching `package.json` engines (currently
+  `^22.23.4 || ^24.22.1 || ^26.12.1`).
+- See [SECURITY.md](SECURITY.md) for the public GitHub Pages deployment boundary
+  and security maintenance checks.
 
 ## Quick Start
 
