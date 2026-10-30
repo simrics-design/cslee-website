@@ -4,7 +4,8 @@ import { createHash } from 'node:crypto';
 // CSP script hashes use HTML parser newline normalization, including when the
 // repository is checked out with Windows CRLF line endings.
 const path = new URL('../index.html', import.meta.url);
-let html = (await readFile(path, 'utf8')).replace(/\r\n?/g, '\n');
+const source = (await readFile(path, 'utf8')).replace(/\r\n?/g, '\n');
+let html = source;
 html = html.replace(/<meta http-equiv="Content-Security-Policy" content="[^"]*">\s*/g, '')
   .replace(/<meta name="referrer" content="[^"]*">\s*/g, '');
 const hashes = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
@@ -25,7 +26,7 @@ const policy = [
 html = html.replace(/<meta charset="utf-8">/i, '');
 html = html.replace(/<head>/i, `<head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${policy}"><meta name="referrer" content="strict-origin-when-cross-origin">`).trimEnd() + '\n';
 if (process.argv.includes('--check')) {
-  if (html !== await readFile(path, 'utf8')) throw new Error('Run node tools/security-policy.mjs after changing inline scripts.');
+  if (html !== source) throw new Error('Run node tools/security-policy.mjs after changing inline scripts.');
   console.log('Static homepage CSP hashes and ordering verified.');
 } else {
   await writeFile(path, html, 'utf8');
