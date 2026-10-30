@@ -1,0 +1,28 @@
+# GitHub Pages publishes only the static homepage. Keep the unused Sites
+# starter and local development tools out of the generated website.
+exclude:
+  - node_modules
+  - dist
+  - vendor
+  - .openai
+  - .env*
+  - app
+  - build
+  - db
+  - drizzle
+  - examples
+  - public
+  - tests
+  - tools
+  - worker
+  - README.md
+  - SECURITY.md
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - next.config.ts
+  - vite.config.ts
+  - tsconfig.json
+  - drizzle.config.ts
+  - eslint.config.mjs
+  - postcss.config.mjs
